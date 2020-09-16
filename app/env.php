@@ -1,3 +1,3 @@
 <?php
 
-define('URL', 'http://blog.me/');
+define('URL', 'http://nbablog.me/');

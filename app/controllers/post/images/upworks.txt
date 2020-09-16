@@ -1,0 +1,19 @@
+Poštovani,
+
+Videvši Vaš konkurs osetio sam se kompetentnim da apliciram, jer smatram da mogu odgovoriti Vašim zahtevima. 
+Što se tiče radnog iskustva, duže od godinu dana backend radim isključivo u Laravelu. I pre toga imam iskustva u radu sa PHP Mysql sajtovima, te smatram da je moje znanje zadovoljavajuće. 
+
+Dobro se snalazim sa frontend tehnologijama, za CSS koristim bootstrap ili SASS, ranije sam koristio JQuery, ali u poslednje vreme sve više prelazim na Vue.js.
+Radio sam nekoliko Single Page Aplikacija, Laravel za API, Vue.js frontend. Vidim da se SPA i mobilne aplikacije preuzimaju primat,tako da sve više postaju predmet mog interesovanja.
+
+Trenutno izradjujem sajt za prodaju DJ opreme, postavio sam ga na Digital Ocean droplet : https://djmarket.co/ Napomenuo bih da sajt još nije završen, svakodnevno radim na njemu i dodajem nove funkcije. 
+Na github-u se nalaze i neki stariji projekti: https://github.com/losmi183
+
+
+Želim još da napomenem koliko mi je važno da se konstantno usavršavan i stičem nova znanja, za šta bih imao odličnu priliku u Vašoj firmi.
+
+S poštovanjem
+
+Miloš Glogovac
+066/085-541
+milos.glogovac@gmail.com

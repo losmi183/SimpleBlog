@@ -1,0 +1,25 @@
+Poštovani,
+
+Videvši Vaš konkurs osetio sam se kompetentnim da apliciram, jer smatram da mogu odgovoriti Vašim zahtevima. 
+
+Već godinama se bavim kreiranjem web sajtova i aplikacija. U početku sam koristio čist PHP, zatim sam se oprobao u Wordpress-u, a poslednjih godinu dana koristim isključivo Laravel framework. Dobro poznajem Laravelove alate i način rada i mogu da kažem da imam solidno iskustvo rada sa Mysql bazom, kao i sa izradom frontend-a.
+
+Neke od mojih radova možete videti na: 
+https://djmarket.co/ (E-commerce aplikacija, implementiran shopping cart, stripe payment sa administracijom product-a,, order-a...)   
+
+http://gril66.com/ (Prilagodjen za srbiju) 
+kao i na mojoj github stranici: https://github.com/losmi183.
+
+Dobro se snalazim sa frontend tehnologijama, za CSS koristim bootstrap ili SASS. Za JS, sam ranije koristio JQuery, ali u poslednje vreme sve više prelazim na Vue.js.
+Takodje imam iskustvo u izradi Single Page Aplikacija, konkretno povezivanju Laravela kao backend-a i Vue.js na frontend-u, preko REST API i AJAX-a.
+
+Composer i git koristim svakodnevno u radu. Za laravel projekte koristim Digital Ocean droplete. Imam iskustvo u servisiranju Ubuntu operativnog sistema i setovanju Apache, Nginx i Mysql servera.
+
+
+Želim još da napomenem koliko mi je važno da radim u kvalitetnom timu i da se konstantno usavršavan i stičem nova znanja, za šta verujem da bi imao odličnu priliku u Vašoj firmi.
+
+S poštovanjem
+
+Miloš Glogovac
+066/085-541
+milos.glogovac@gmail.com

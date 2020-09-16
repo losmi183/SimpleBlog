@@ -25,17 +25,17 @@ class Post extends Database {
     }
 
 
-    public function create($title, $content, $author)
+    public function create($title, $content, $author, $image)
     {
-        $stmt = $this->db->prepare("INSERT INTO posts (title,content,author) VALUES (:title,:content,:author)");
-        $result = $stmt->execute([':title' => $title, ':content' => $content, ':author' => $author]);
+        $stmt = $this->db->prepare("INSERT INTO posts (title,content,author,image) VALUES (:title,:content,:author,:image)");
+        $result = $stmt->execute([':title' => $title, ':content' => $content, ':author' => $author, ':image' => $image]);
         return $result;  
     }
 
-    public function update($id, $title, $content, $author)
+    public function update($id, $title, $content, $author, $image)
     {
-        $stmt = $this->db->prepare("UPDATE posts SET title=:title, content=:content, author=:author WHERE id=:id");
-        $post = $stmt->execute(['id' =>$id, ':title' => $title, ':content' => $content, ':author' => $author]);
+        $stmt = $this->db->prepare("UPDATE posts SET title=:title, content=:content, author=:author, image=:image WHERE id=:id");
+        $post = $stmt->execute(['id' =>$id, ':title' => $title, ':content' => $content, ':author' => $author, ':image' => $image]);
         return $post;        
     }
     

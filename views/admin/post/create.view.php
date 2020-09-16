@@ -7,6 +7,13 @@
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/views/partials/header.php'; ?>
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/views/includes/notification.php'; ?>
 
+<!-- WYSIWYG plugin scripts  -->
+<script src="https://cdn.tiny.cloud/1/82chw70nauojexfwuxjtpzs2xxxbb6igj3ndmcoxktu8894d/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script>
+    tinymce.init({
+    selector: '#mytextarea'
+    });
+</script>
 
 <div class="container">
     <div class="row">
@@ -23,7 +30,7 @@
                         </div>
                         <div class="form-group">
                             <label for="">Content</label>
-                            <textarea name="content" class="form-control" cols="30" rows="10"></textarea>
+                            <textarea id="mytextarea" name="content" class="form-control" cols="30" rows="10"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="">Author</label>

@@ -24,6 +24,7 @@
                             <th>Title</th>
                             <th>Content</th>
                             <th>Author</th>
+                            <th>Image</th>
                             <th></th>
                             <th></th>
                             <th></th>
@@ -35,6 +36,7 @@
                             <td><?php echo $post->title; ?></td>
                             <td><?php echo shortText($post->content); ?></td>
                             <td><?php echo $post->author; ?></td>
+                            <td><img height="80px" src="/images/<?php echo $post->image; ?>" alt=""></td>
                             <td><a href="#" class="btn btn-success">View</a></td>
                             <td><a href="/views/admin/post/edit.view.php?id=<?php echo $post->id; ?>" class="btn btn-primary">Edit</a></td>
                             <td><a href="/app/controllers/post/deletePost.php?id=<?php echo $post->id; ?>" class="btn btn-danger">Delete</a></td>                        </tr>
