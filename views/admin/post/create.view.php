@@ -23,7 +23,7 @@
                     <h3>Add New Post</h3>
                 </div>
                 <div class="card-body">
-                    <form action="/app/controllers/post/createPost.php" method="POST" enctype="multipart/form-data">
+                    <form id="main-form" action="/app/controllers/post/createPost.php" method="POST" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="">Title</label>
                             <input type="text" class="form-control" name="title">
@@ -36,6 +36,9 @@
                             <label for="">Author</label>
                             <input type="text" class="form-control" name="author" >
                         </div>
+
+                        <hr>
+
                         <div class="form-group">
                             <label for="">Image</label>
                             <input type="file" class="form-control" name="image" >

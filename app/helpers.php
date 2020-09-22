@@ -23,3 +23,7 @@ function shortText($text, $n = 80)
         return $text;
     }
 }
+
+function formatTime($timestamp) {
+    echo date('M j Y g:i A', strtotime($timestamp));
+}

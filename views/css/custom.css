@@ -1,0 +1,40 @@
+.comment {
+    background: rgb(244, 244, 244);
+    border: 1px solid #aaa;
+    margin-bottom: 10px;
+}
+.sub-comment {
+    background: rgb(226, 226, 226);
+    border: 1px solid #aaa;
+    margin-bottom: 10px;
+    margin-left: 160px;
+}
+.comment-title {
+    min-width: 80px;
+    min-height: 60px;
+}
+.comment-content {
+    padding-left: 50px;
+}
+
+p.up {
+    color: green;
+}
+
+p.down {
+    color: red;
+    margin-left: 20px;
+}
+
+button.text-success button.text-danger {
+    cursor: pointer;
+}
+
+.subcomments {
+    display: none;
+    margin-left: 160px;
+}
+
+.subcomment-form {
+    display: none;
+}

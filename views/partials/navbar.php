@@ -1,7 +1,7 @@
 <?php require $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php'; ?>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Blog App</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <a class="navbar-brand" href="#"><img height="80px" src="images/nba-logo.png" alt=""></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -16,7 +16,6 @@
 
     
     <ul class="navbar-nav ml-auto">
-      <li> <h1><?php echo LoggedIn(); ?></h1> </li>
       <?php if(!LoggedIn()) : ?>
         <li class="nav-item"><a class="nav-link" href="/views/auth/register.view.php">Sign up</a></li>
         <li class="nav-item"><a class="nav-link" href="/views/auth/login.view.php">Sign in</a></li>
