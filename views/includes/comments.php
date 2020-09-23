@@ -18,13 +18,15 @@
             <?php foreach ($results as $comment) : ?>
                 <div class="comment">
                     <div class="d-flex p-3">
-                        <h5 class="comment-title"><?php echo $comment->name; ?></h5>
+                        <h5 class="comment-title">
+                            <p><?php echo $comment->name; ?></p>
+                            <p class="comment-time"><?php echo formatTime($comment->created_at); ?></p>
+                        </h5>
                         <p class="comment-content"><?php echo $comment->content; ?></p>
                     </div> 
                     <div class="d-flex justify-content-between">
                         <div class="p-3">
-                            <a href=""><p class="material-icons up mr-1">thumb_up</p></a> 49
-                            <a href=""><p class="material-icons down mr-1">thumb_down</p></a>-11
+                            <span id="<?php echo $comment->id; ?>" class="like"><p class="material-icons up mr-1">thumb_up</p><span><?php echo $comment->likes; ?></span></span> 
                         </div>
                         <div class="p-3">
                             <button class="text-success view-replies">View replies</button>
@@ -38,7 +40,7 @@
                         <h5 class="mb-3">Reply This Comment</h5>
                         <form action="/app/controllers/comment/createComment.php" method="POST">
                             <input type="hidden" name="post_id" value="<?php echo $_GET['id']; ?>">
-                            <input type="hidden" name="parent_id" value="<?php echo $_GET['id']; ?>">
+                            <input type="hidden" name="parent_id" value="<?php echo $comment->id; ?>">
                             <div class="form-group">
                                 <label>Name</label>
                                 <input type="text" class="form-control" name="name">
@@ -59,14 +61,16 @@
                         <?php if(count($subcomments = $comments->allSubcomments($comment->id)) > 0) :  ?>
                             <!-- Printing Subcomments  -->
                             <?php foreach($subcomments as $comment) : ?>
-                                <div class="sub-comment">                    
-                                    <div class="d-flex p-3">
-                                        <h5 class="comment-title"><?php echo $comment->name; ?></h5>
-                                        <p class="comment-content"><?php echo $comment->content; ?></p>
-                                    </div> 
+                                <div class="sub-comment">
+                                        <div class="d-flex p-3">
+                                            <h5 class="comment-title">
+                                                <p><?php echo $comment->name; ?></p>
+                                                <p class="comment-time"><?php echo formatTime($comment->created_at); ?></p>
+                                            </h5>
+                                            <p class="comment-content"><?php echo $comment->content; ?></p>
+                                        </div> 
                                     <div class="p-3">
                                         <a href=""><p class="material-icons up mr-1">thumb_up</p></a> 49
-                                        <a href=""><p class="material-icons down mr-1">thumb_down</p></a>-11
                                     </div>
                                 </div>
                             <?php endforeach; ?>

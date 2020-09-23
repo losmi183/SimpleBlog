@@ -29,6 +29,12 @@ class Comment extends Database {
         $stmt->execute([':parent_id' => $id]);
         return $stmt->fetchAll();    
     }
+    
+    public function addLike($id) {
+        $stmt = $this->db->prepare("UPDATE comments SET likes = likes + 1 WHERE id=:id");
+        $result = $stmt->execute([':id' => $id]);
+        return $result;
+    }
 
 
 

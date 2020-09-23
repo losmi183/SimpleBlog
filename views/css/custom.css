@@ -38,3 +38,17 @@ button.text-success button.text-danger {
 .subcomment-form {
     display: none;
 }
+
+.comment-time {
+    font-weight: 400 !important;
+    font-size: 0.7rem;
+}
+
+span.like:hover {
+    display: inline-block;
+    cursor: pointer;
+}
+span.dislike:hover {
+    display: inline-block;
+    cursor: pointer;
+}

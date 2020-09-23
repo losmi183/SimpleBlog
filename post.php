@@ -1,4 +1,4 @@
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php'; ?>
+<?php require_once $_SERVER['DOCUMENT_ROOT']. '/vendor/autoload.php'; ?>
 
 <?php use App\Model\Post; ?>
 
@@ -7,22 +7,26 @@
 <?php require_once 'views/includes/notification.php'; ?>
 
 <?php 
-    if(isset($_GET)) {
-        $post = new Post; 
-        $post = $post->show($_GET['id']);
-    } else {
-        header("Location: index.php");
-    }
+    if (isset($_GET)) {
+    $post = new Post;
+    $post = $post -> show($_GET['id']);
+} else {
+    header("Location: index.php");
+}
 ?>
 
 <div class="container pt-5">
     <div class="row">
-        <div class="col-12"><h3><?php echo $post->title; ?></h3></div>
+        <div class="col-12">
+            <h3><?php echo $post->title; ?></h3>
+        </div>
         <div class="col-12">
             <div class="card">
                 <div class="card-header d-flex justify-content-between">
-                    <a href=""><h6><?php echo $post->author; ?></h6></a>   
-                    <p><?php echo formatTime($post->created_at); ?></p>             
+                    <a href="">
+                        <h6><?php echo $post->author; ?></h6>
+                    </a>
+                    <p><?php echo formatTime($post->created_at); ?></p>
                 </div>
                 <div class="card-body">
                     <?php echo $post->content; ?>
@@ -41,19 +45,37 @@
 <?php require_once 'views/partials/footer.php'; ?>
 
 <script>
-    $( document ).ready(function() {
-
+    $(document).ready(function () {
         // Toggle Subcomments        
-        $(".view-replies").click(function(){
+        $(".view-replies").click(function () {
             $(this).parent().parent().siblings(".subcomments").toggle();
         })
-
         // Toggle Add Subcomment
-        $(".add-subcomment").click(function(){
+        $(".add-subcomment").click(function () {
             $(this).parent().parent().siblings(".subcomment-form").toggle();
         })
     });
 </script>
 
+<script>
 
-  
+    // Get request increment likes
+    function addLike(id) {
+        fetch('app/controllers/comment/addLike.php?id=' + id)
+            .then(res => res.text())
+            .then(data => {
+                let x = document.getElementById(id).childNodes[1].textContent;
+                let num = parseInt(x);
+                num++;
+                document.getElementById(id).childNodes[1].innerHTML = num;
+            })
+            .catch(error => console.log(error))
+    }
+
+    document.querySelectorAll('.like').forEach(element => {
+        element.addEventListener('click', function () {
+            addLike(this.id);
+        })
+    });
+
+</script>
